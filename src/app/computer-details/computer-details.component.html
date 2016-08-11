@@ -1,0 +1,23 @@
+<div>
+  Computer ID: {{computerId}}
+</div>
+
+<br/>
+<br/>
+
+<div *ngIf="computer">
+  <div>
+  Computer name: {{computer.name}}
+  <br/>
+
+  Computer IP address: {{computer.ipAddress}}
+  <br/>
+  User name: {{computer.user}}
+  <br/>
+
+  Memory: {{computer.memory}}
+  <br/>
+  <br/>
+  <button (click)="onNavigate(computer)">Navigate to usage data</button>
+</div>
+

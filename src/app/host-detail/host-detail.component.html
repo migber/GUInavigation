@@ -1,0 +1,31 @@
+<br/>
+<br/>
+<div>
+  Host ID: {{hostId}}
+</div>
+<div *ngIf="host">
+  <div>
+  Host name: {{host.name}}
+  <br/>
+  <br/>
+  <br/>
+<div *ngFor="let vM of virtualMachine$ | async">
+  Virtual machine name: {{vM.name}}
+  <br/>
+  Virtual machine id: {{vM.virtualMachineId}}
+   <br/>  
+   State: {{vM.state}}
+  <br/>
+  Virtual procesor count: {{vM.virtualProcessorCount}}
+   <br/>  
+   Virtual memory value: {{vM.virtualMemory.value}}
+   <br/>  
+   Virtual memory unit: {{vM.virtualMemory.unit}}
+  <div>
+    <button (click)="onNavigate(vM.virtualMachineId)">go to UsageReport</button>
+  </div>
+<br/>
+<br/>
+  <br/>
+  
+</div>

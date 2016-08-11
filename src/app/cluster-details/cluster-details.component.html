@@ -1,0 +1,31 @@
+
+
+<br/>
+<br/>
+<div>
+  Cluster ID: {{clusterId}}
+</div>
+<div *ngIf="cluster">
+  <div>
+  Cluster name: {{cluster.name}}
+  <br/>
+  <br/>
+  <br/>
+<div *ngFor="let host of hosts$ | async">
+  Host name: {{host.name}}
+  <br/>
+  Host id: {{host.hostId}}
+  <br/>
+  Host procesor count: {{host.processorCount}}
+  <br/>  
+   Host physical memory value: {{host.physicalMemory.value}}
+   <br/>  
+   Host physical memory unit: {{host.physicalMemory.unit}}
+  <div>
+    <button (click)="onNavigate(host)">go to Virtual Machine</button>
+  </div>
+<br/>
+<br/>
+  <br/>
+  
+</div>
